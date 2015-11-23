@@ -95,15 +95,15 @@
 
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="ingresar"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                                    <a href="ingresararticulo"><i class="glyphicon glyphicon-plus-sign"></i>Ingresar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="modificar"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
+                                    <a href="modificararticulo"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="buscar"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
+                                    <a href="buscararticulo"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
                                 </li>
-                               
+                                
                             </ul>
                         </li>
 
@@ -144,23 +144,24 @@
 
 
                         <!--4to Clientes-->
-                        <li>
+                                       <li>
                             <a href="#"><i class="fa fa-user fa-fw"></i>Clientes<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="ingresoCliente.html"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                                    <a href="ingresarcliente"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="modificarCliente.html"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
+                                    <a href="modificarcliente"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="buscarCliente.html"><i class="fa fa-search-plus"></i> Buscar <span class="fa arrow"></span></a>
+                                    <a href="buscarcliente"><i class="fa fa-search-plus"></i> Buscar <span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="eliminarCliente.html"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
+                                    <a href="eliminarcliente"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
                                 </li>
                             </ul>
                         </li>
+
 
                         <!--5to Vendedor-->
 

@@ -96,15 +96,15 @@
 
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="ingresar"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                                    <a href="ingresararticulo"><i class="glyphicon glyphicon-plus-sign"></i>Ingresar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="modificar"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
+                                    <a href="modificararticulo"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="buscar"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
+                                    <a href="buscararticulo"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
                                 </li>
-                             
+                                
                             </ul>
                         </li>
 

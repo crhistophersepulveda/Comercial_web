@@ -96,17 +96,15 @@
 
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="ingresoArticulo.html"><i class="glyphicon glyphicon-plus-sign"></i>Ingresar<span class="fa arrow"></span></a>
+                                    <a href="ingresararticulo"><i class="glyphicon glyphicon-plus-sign"></i>Ingresar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="modificarArticulo.html"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
+                                    <a href="modificararticulo"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="buscarArticulo.html"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
+                                    <a href="buscararticulo"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
                                 </li>
-                                <li>
-                                    <a href="eliminarArticulo.html"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
-                                </li>
+                                
                             </ul>
                         </li>
 
