@@ -346,6 +346,9 @@
                                             <th>P. Especialista</th>
                                             <th>P. Constructora</th>
                                             <th>Stock</th>
+                                            <th>Marca</th>
+                                            <th>Rubro</th>
+                                            <th>Unidad</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -361,7 +364,9 @@
                                                 <td>$buscars->especialista</td>
                                                 <td>$buscars->constructora</td>
                                                 <td>$buscars->stock</td>
-                                                
+                                                <td>$buscars->Marca_Marca</td>
+                                                <td>$buscars->Rubro_Rubro</td>
+                                                <td>$buscars->Unidad_Unidad</td>
                                                 ";       
                                                 }
                                             echo "
