@@ -7,9 +7,16 @@ class controlador_direccion extends CI_Controller{
 		$this->load->model('modelo_model');
 	}
 
+
+
+
 	public function Index (){
 		echo "es una prueba del controlador";
 	}
+
+/*----------------------------------------------------------------------------------
+									ARTICULO
+------------------------------------------------------------------------------------*/
 
 	public function eliminararticulo(){
 		$this ->load-> view("Articulo/eliminarArticulo");
@@ -32,7 +39,10 @@ class controlador_direccion extends CI_Controller{
 		$datos['buscar'] = $lista_articulo;
 		$this->load->view("Articulo/buscarArticulo",$datos);
 	}
-
+	
+/*----------------------------------------------------------------------------------
+									CLIENTE
+------------------------------------------------------------------------------------*/
 
 	public function ingresarcliente(){
 		$this ->load-> view("Cliente/ingresoCliente");
@@ -45,7 +55,7 @@ class controlador_direccion extends CI_Controller{
 	public function buscarcliente(){
 		$this ->load-> view("Cliente/buscarCliente");
 	}
-	
+
 	public function eliminarcliente(){
 		$this ->load-> view("Cliente/eliminarCliente");
 	}
