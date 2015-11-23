@@ -77,221 +77,238 @@
         <!-- /.navbar-top-links -->
         <!--MODULO DERECHO AQUIIIIII ABAJO-->
 
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="side-menu">
 
-                    <!--INICIO-->
-                    <li>
-                        <a href="index.html"><i class="fa fa-laptop"></i><b>Inicio</b><span class="fa arrow"></span></a>
-                    </li>
+    
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
 
-                    <!--1ºer Articulos-->
-                   <li>
+                        <!--INICIO-->
+                        <li>
+                            <a href="<?php echo base_url() ?>index.php/index/Index"><i class="fa fa-laptop"></i><b>Inicio</b><span class="fa arrow"></span></a>
+                        </li>
+
+                        <!--1ºer Articulos-->
+                         <li>
 
                             <a href="#"><i class="fa fa-th-large"></i> Artículos<span class="fa arrow"></span></a>
 
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="ingresararticulo"><i class="glyphicon glyphicon-plus-sign"></i>Ingresar<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="glyphicon glyphicon-plus-sign"></i>Ingresar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="modificararticulo"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
+                                    <a href="<?php echo base_url() ?>index.php/modificar/modificararticulo"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="buscararticulo"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
+                                    <a href="<?php echo base_url() ?>index.php/buscar/buscararticulo"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
                                 </li>
                                 
                             </ul>
                         </li>
 
-                    <!--2ºdo Venta-->
+                        <!--2ºdo Venta-->
 
-                    <li>
+                        <li>
 
-                        <a href="#"><i class="fa fa-shopping-cart"></i> Ventas<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-shopping-cart"></i> Ventas<span class="fa arrow"></span></a>
 
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="ingresoFactura.html"><i class="fa fa-file-text-o"></i> Factura<span class="fa arrow"></span></a>
-                            </li>
-                            <li>
-                                <a href="morris.html"><i class="fa fa-file-text-o"></i> Notas de Crédito<span class="fa arrow"></span></a>
-                            </li>
-                            <li>
-                                <a href="ingresoPresupuesto.html"><i class="fa fa-file-text-o"></i> Presupuestos<span class="fa arrow"></span></a>
-                            </li>
-                            <li>
-                                <a href="buscarFactura.html"><i class="fa fa-search-plus"></i> Buscar Factura<span class="fa arrow"></span></a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <!--3ero Compras-->
-                    <li>
-                        <a href="#"><i class="fa fa-shopping-cart"></i> Compras<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="ingresoCompra.html"><i class="fa fa-file-text-o"></i> Ingresar Facturar<span class="fa arrow"></span></a>
-                            </li>
-                            <li>
-                                <a href="buscarCompra.html"><i class="fa fa-search-plus"></i> Buscar <span class="fa arrow"></span></a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                    <!--4to Clientes-->
-                                          <li>
-                            <a href="#"><i class="fa fa-user fa-fw"></i>Clientes<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="ingresarcliente"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="fa fa-file-text-o"></i> Factura<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="modificarcliente"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="fa fa-file-text-o"></i> Notas de Crédito<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="buscarcliente"><i class="fa fa-search-plus"></i> Buscar <span class="fa arrow"></span></a>
+                                    <a href="#"><i class="fa fa-file-text-o"></i> Presupuestos<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="eliminarcliente"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="fa fa-search-plus"></i> Buscar Factura<span class="fa arrow"></span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!--3ero Compras-->
+                        <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i> Compras<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#"><i class="fa fa-file-text-o"></i> Ingresar Facturar<span class="fa arrow"></span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-search-plus"></i> Buscar <span class="fa arrow"></span></a>
                                 </li>
                             </ul>
                         </li>
 
 
-                    <!--5to Vendedor-->
+                        <!--4to Clientes-->
+                                       <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i>Clientes<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo base_url() ?>index.php/modificar/modificarcliente"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo base_url() ?>index.php/buscar/buscarcliente"><i class="fa fa-search-plus"></i> Buscar <span class="fa arrow"></span></a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+
+
+                        <!--5to Vendedor-->
+
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i>Vendedores<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    <!--6to Proveedor-->
 
                     <li>
-                        <a href="#"><i class="fa fa-user fa-fw"></i>Vendedores<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-user fa-fw"></i>Proveedor<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="ingresoVendedor.html"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                                <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
                             </li>
                             <li>
-                                <a href="modificarVendedor.html"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
+                                <a href="#"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
                             </li>
                             <li>
-                                <a href="buscarVendedor.html"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
+                                <a href="#"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
                             </li>
-                            <li>
-                                <a href="eliminarVendedor.html"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
-                            </li>
+                           
                         </ul>
                     </li>
+                        <!--7to Reportes-->
 
-                    <!--6to Reportes-->
+                        <li>
 
-                    <li>
+                            <a href="#"><i class="fa fa-book"></i> Reportes<span class="fa arrow"></span></a>
 
-                        <a href="#"><i class="fa fa-book"></i> Reportes<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#"><i class="fa fa-shopping-cart"></i> Artículos<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Lista de Articulos</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Lista de Artículos Detallado</a>
+                                        </li>
 
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#"><i class="fa fa-shopping-cart"></i> Artículos<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Lista de Articulos</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Lista de Artículos Detallado</a>
-                                    </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
 
-                                </ul>
-                                <!-- /.nav-third-level -->
-                            </li>
-
-                            <li>
-                                <a href="#"><i class="fa fa-shopping-cart"></i> Ventas<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Ventas por Artículo</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Ventas por Fecha</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Ventas por Marca</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Ventas Total </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Ventas Total Detalle </a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-third-level -->
-                            </li>
-
-
-
-                            <li>
-                                <a href="#"><i class="fa fa-shopping-cart"></i> Compras<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Compras por Artículo</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Compras por Fecha</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Compras por Proveedor</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Compras Total </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Compras Total Detalle </a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-third-level -->
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-user fa-fw"></i>Clientes<span class="fa arrow"></span></a>
-
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Lista Clientes</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Clientes Frecuentes</a>
-                                    </li>
-
-                                </ul>
-                                <!-- /.nav-third-level -->
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-user fa-fw"></i>Vendedores<span class="fa arrow"></span></a>
-
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Lista Vendedores</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Comisiones Pagadas</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Comisiones por Pagar</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Ventas por Vendedor</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Ventas por Vendedor Detalle </a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-third-level -->
-                            </li>
-                        </ul>
-                    </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-shopping-cart"></i> Ventas<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Ventas por Artículo</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Ventas por Fecha</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Ventas por Marca</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Ventas Total </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Ventas Total Detalle </a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
 
 
 
-                </ul>
+                                <li>
+                                    <a href="#"><i class="fa fa-shopping-cart"></i> Compras<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Compras por Artículo</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Compras por Fecha</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Compras por Proveedor</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Compras Total </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Compras Total Detalle </a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-user fa-fw"></i>Clientes<span class="fa arrow"></span></a>
+
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Lista Clientes</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Clientes Frecuentes</a>
+                                        </li>
+
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-user fa-fw"></i>Vendedores<span class="fa arrow"></span></a>
+
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Lista Vendedores</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Comisiones Pagadas</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Comisiones por Pagar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Ventas por Vendedor</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Ventas por Vendedor Detalle </a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
             </div>
-            <!-- /.sidebar-collapse -->
-        </div>
+
 
 
     </nav>

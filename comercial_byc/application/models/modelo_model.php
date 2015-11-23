@@ -13,23 +13,42 @@ class Modelo_model extends CI_Model
 
 
 /*------------------------------------------------------------------------------------/
-								MOSTRAR TABLAS BASE DE DATOS
+								PRODUCTOS
 -------------------------------------------------------------------------------------*/
+
+/*--MOSTRAR PRODUCTOS--*/
 
 	public function mostrar_productos(){
 			return $this->db->get('Producto');
-	}
-	public function mostrar_proveedor(){
-			return $this->db->get('Proveedor');
 	}
 
 
 
 /*------------------------------------------------------------------------------------/
-								INGRESAR DATOS
+								CLIENTES
 -------------------------------------------------------------------------------------*/
 
+/*--MOSTRAR CLIENTES--*/
+	public function mostrar_clientes(){
+		return $this->db->get('Cliente');
+	}
+/*------------------------------------------------------------------------------------/
+								VENDEDOR
+-------------------------------------------------------------------------------------*/
 
+/*--MOSTRAR VENDEDORES--*/
+	public function mostrar_vendedores(){
+		return $this->db->get('Vendedor');
+	}
+
+/*------------------------------------------------------------------------------------/
+								PROVEEDOR
+-------------------------------------------------------------------------------------*/
+
+/*--MOSTRAR PROVEEDORES--*/
+	public function mostrar_proveedor(){
+			return $this->db->get('Proveedor');
+	}
 
 
 

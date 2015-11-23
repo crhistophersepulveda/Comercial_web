@@ -24,8 +24,8 @@
 
 
     <!-- Custom Fonts -->
-    <link href=<?php echo base_url(); ?>assets//bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    caca
+    <link href="<?php echo base_url(); ?>assets//bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -33,12 +33,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script>
 
-function abrir(url) {
-open(url,'HtlmlPage,html','top=300,left=300,width=300,height=300') ;
-}
-    </script> 
 
 
 </head>
@@ -88,33 +83,32 @@ open(url,'HtlmlPage,html','top=300,left=300,width=300,height=300') ;
             <!-- /.navbar-top-links -->
             <!--MODULO DERECHO AQUIIIIII ABAJO-->
 
+         
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
 
                         <!--INICIO-->
                         <li>
-                            <a href="index.html"><i class="fa fa-laptop"></i><b>Inicio</b><span class="fa arrow"></span></a>
+                            <a href="<?php echo base_url() ?>index.php/index/Index"><i class="fa fa-laptop"></i><b>Inicio</b><span class="fa arrow"></span></a>
                         </li>
 
                         <!--1ºer Articulos-->
-                        <li>
+                         <li>
 
                             <a href="#"><i class="fa fa-th-large"></i> Artículos<span class="fa arrow"></span></a>
 
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="ingresoArticulo.html"><i class="glyphicon glyphicon-plus-sign"></i>Ingresar<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="glyphicon glyphicon-plus-sign"></i>Ingresar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="modificarArticulo.html"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
+                                    <a href="<?php echo base_url() ?>index.php/modificar/modificararticulo"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="buscarArticulo.html"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
+                                    <a href="<?php echo base_url() ?>index.php/buscar/buscararticulo"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
                                 </li>
-                                <li>
-                                    <a href="eliminarArticulo.html"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
-                                </li>
+                                
                             </ul>
                         </li>
 
@@ -126,16 +120,16 @@ open(url,'HtlmlPage,html','top=300,left=300,width=300,height=300') ;
 
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="ingresoFactura.html"><i class="fa fa-file-text-o"></i> Factura<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="fa fa-file-text-o"></i> Factura<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="morris.html"><i class="fa fa-file-text-o"></i> Notas de Crédito<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="fa fa-file-text-o"></i> Notas de Crédito<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="ingresoPresupuesto.html"><i class="fa fa-file-text-o"></i> Presupuestos<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="fa fa-file-text-o"></i> Presupuestos<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="buscarFactura.html"><i class="fa fa-search-plus"></i> Buscar Factura<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="fa fa-search-plus"></i> Buscar Factura<span class="fa arrow"></span></a>
                                 </li>
                             </ul>
                         </li>
@@ -145,33 +139,32 @@ open(url,'HtlmlPage,html','top=300,left=300,width=300,height=300') ;
                             <a href="#"><i class="fa fa-shopping-cart"></i> Compras<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="ingresoCompra.html"><i class="fa fa-file-text-o"></i> Ingresar Facturar<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="fa fa-file-text-o"></i> Ingresar Facturar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="buscarCompra.html"><i class="fa fa-search-plus"></i> Buscar <span class="fa arrow"></span></a>
+                                    <a href="#"><i class="fa fa-search-plus"></i> Buscar <span class="fa arrow"></span></a>
                                 </li>
                             </ul>
                         </li>
 
 
                         <!--4to Clientes-->
-                        <li>
+                                       <li>
                             <a href="#"><i class="fa fa-user fa-fw"></i>Clientes<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="ingresoCliente.html"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="modificarCliente.html"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
+                                    <a href="<?php echo base_url() ?>index.php/modificar/modificarcliente"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="buscarCliente.html"><i class="fa fa-search-plus"></i> Buscar <span class="fa arrow"></span></a>
+                                    <a href="<?php echo base_url() ?>index.php/buscar/buscarcliente"><i class="fa fa-search-plus"></i> Buscar <span class="fa arrow"></span></a>
                                 </li>
-                                <li>
-                                    <a href="eliminarCliente.html"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
-                                </li>
+                                
                             </ul>
                         </li>
+
 
                         <!--5to Vendedor-->
 
@@ -179,21 +172,37 @@ open(url,'HtlmlPage,html','top=300,left=300,width=300,height=300') ;
                             <a href="#"><i class="fa fa-user fa-fw"></i>Vendedores<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="ingresoVendedor.html"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="modificarVendedor.html"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="buscarVendedor.html"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="eliminarVendedor.html"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
                                 </li>
                             </ul>
                         </li>
+                    <!--6to Proveedor-->
 
-                        <!--6to Reportes-->
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i>Proveedor<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
+                            </li>
+                           
+                        </ul>
+                    </li>
+                        <!--7to Reportes-->
 
                         <li>
 
