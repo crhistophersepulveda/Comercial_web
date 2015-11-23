@@ -149,16 +149,16 @@
                             <a href="#"><i class="fa fa-user fa-fw"></i>Clientes<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="ingresoCliente.html"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                                    <a href="ingresocliente"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="modificarCliente.html"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
+                                    <a href="modificarcliente"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="buscarCliente.html"><i class="fa fa-search-plus"></i> Buscar <span class="fa arrow"></span></a>
+                                    <a href="buscarcliente"><i class="fa fa-search-plus"></i> Buscar <span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="eliminarCliente.html"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
+                                    <a href="eliminarcliente"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
                                 </li>
                             </ul>
                         </li>
@@ -169,16 +169,16 @@
                             <a href="#"><i class="fa fa-user fa-fw"></i>Vendedores<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="ingresoVendedor.html"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                                    <a href="ingresoVendedor.php"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="modificarVendedor.html"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
+                                    <a href="modificarVendedor.php"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="buscarVendedor.html"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
+                                    <a href="buscarVendedor.php"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="eliminarVendedor.html"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
+                                    <a href="eliminarVendedor.php"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
                                 </li>
                             </ul>
                         </li>
