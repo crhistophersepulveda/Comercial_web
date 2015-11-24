@@ -151,7 +151,7 @@
                             <a href="#"><i class="fa fa-user fa-fw"></i>Clientes<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                                    <a href="<?php echo base_url() ?>index.php/ingresarCliente/Index"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
                                     <a href="<?php echo base_url() ?>index.php/modificar/modificarcliente"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
@@ -319,7 +319,7 @@
 
         </nav>
     </div>
-        <div id="page-wrapper">
+    <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Ingreso Cliente</h1>
@@ -329,33 +329,109 @@
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
+                    <div class="panel panel-default"  >
+                       <?=form_open('http://localhost/Comercial_web/comercial_byc/index.php/ingresarCliente/ingresarcliente');
+            //aqui se procesará nuestro formulario, controlador comentarios, función insertar_comentarios
+            //creamos los arrays que compondran nuestro formulario
+            //primer array con el input que se llamará nombre y será donde introduciremos el mismo
+                $rut = array(
+                    'name' => 'rut',
+                    'id' => 'rut',
+                    'size' => '50',
+                    'class'=>'form-control' // con esto al procesar el formulario de forma incorrecta quedará guardado el dato que le habíamos puesto
+                );
+             
+            //el segundo array(campo email)
+             
+                $nombre = array(
+                    'name' => 'nombre',
+                    'id' => 'nombre',
+                    'size' => '50',
+                    'style' => 'width:50%',
+                    'id' => 'email',
+                    'value' => set_value('nombre')
+                );
+             
+            //el tercero...(campo asunto)
+                $apellido = array(
+                    'name' => 'apellido',
+                    'id' => 'asunto',
+                    'size' => '50',
+                    'style' => 'width:50%',
+                    'value' => set_value('apellido')
+                );
+             
+            //el cuarto...(campo mensaje)
+                $monto = array(
+                    'name' => 'monto',
+                    'id' => 'monto',
+                    'rows' => 10,
+                    'cols' => 40,
+                    'value' => set_value('monto')
+                );
+
+                $email = array(
+                    'name' => 'email',
+                    'id' => 'email',
+                    'rows' => 10,
+                    'cols' => 40,
+                    'value' => set_value('email')
+                );
+
+                $fechat = array(
+                    'name' => 'fechat',
+                    'id' => 'fechat',
+                    'rows' => 10,
+                    'cols' => 40,
+                    'value' => set_value('fechat')
+                );
+
+                $descripcion = array(
+                    'name' => 'descripcion',
+                    'id' => 'descripcion',
+                    'rows' => 10,
+                    'cols' => 40,
+                    'value' => set_value('descripcion')
+                );
+             
+            //el botón submit de nuestro formulario
+                $submit = array(
+                    'name' => 'submit',
+                    'id' => 'submit',
+                    'class'=>'btn btn-default',
+                    'value' => 'Guardar',
+                    'title' => 'Guardar'
+                );
+                ?>
+            <?php
+            ?>
+<div class="panel panel-default"  >
+            <div class="panel-heading">
                             Ingreso de Cliente
                         </div>
-                        <div class="panel-body">
-                            
-                                    <form role="form">
+            <div class="panel-body">
+                                    <form >
                                         <div class="row">
                                             <div class="col-md-2">
                                                 <label>Codigo</label>
-                                                <input class="form-control" />
+                                                <input class="form-control" name='codigo'  />
                                             </div>
                                             <div class="col-md-2">
                                                 <label>Rut</label>
-                                                <input class="form-control" />
+                                                
+                                                <?php echo form_input($rut); ?>
                                             </div>
                                             <div class="col-md-0">
                                             </div>
 
                                             <div class="col-md-3">
                                                 <label>Contacto</label>
-                                                <input class="form-control" />
+                                                <input class="form-control" name="contacto"/>
                                             </div>
 
                                             <div class="col-md-5">
                                                 <label>Razón Social</label>
-                                                <input class="form-control" />
+                                                <input class="form-control" name="razon_social"/>
                                             </div>
                                         </div>
 
@@ -363,11 +439,11 @@
                                             <br />
                                             <div class="col-md-4">
                                                 <label>Dirección</label>
-                                                <input class="form-control" />
+                                                <input class="form-control" name="direccion" />
                                             </div>
                                             <div class="col-md-2">
                                                 <label>Región</label>
-                                                <select class="form-control">
+                                                <select class="form-control" name="region" >
                                                     <option></option>
                                                     <option>Maule</option>
                                                     <option>Rancagua</option>
@@ -376,12 +452,12 @@
 
                                             <div class="col-md-2">
                                                 <label>Celular</label>
-                                                <input class="form-control" />
+                                                <input class="form-control" name="celular"  />
                                             </div>
 
                                             <div class="col-md-2">
                                                 <label>Telefono</label>
-                                                <input class="form-control" />
+                                                <input class="form-control" name="telefono"  />
                                             </div>
                                         </div>
                                         <div class="row">
@@ -389,23 +465,19 @@
                                             
                                             <div class="col-md-2">
                                                 <label>Correo</label>
-                                                <input class="form-control" />
+                                                <input class="form-control" name="correo"  />
                                             </div>
-                                        
-                                           
+                                    
                                             <div class="col-md-2">
                                                 <label>Pagina Web</label>
-                                                <input class="form-control" />
+                                                <input class="form-control" name="web" />
                                             </div>
-
-                                            
                                         </div>
-
                                             <div class="row">
                                                 <br />
                                                 <div class="col-md-2">
                                                     <label>Vendedor</label>
-                                                    <select class="form-control">
+                                                    <select class="form-control" name="vendedor"  >
                                                         <option></option>
                                                         <option>Marcelo</option>
                                                         <option>Luis</option>
@@ -413,7 +485,7 @@
                                                 </div>
                                                 <div class="col-md-2">
                                                     <label>Lista de Precio</label>
-                                                    <select class="form-control">
+                                                    <select class="form-control" name="lista_precio"  >
                                                         <option>Ferretera</option>
                                                         <option>Especialista</option>
                                                         <option>Constructora</option>
@@ -425,7 +497,7 @@
                                         <div class="row">
                                             <br />
                                             <div class="col-md-3">
-                                                <button type="submit" class="btn btn-default">Ingresar</button>
+                                                 <?php echo form_submit($submit);?>
                                             </div>
                                         </div>
                                         
@@ -434,6 +506,10 @@
                       
                     <!-- /.panel -->
                 </div>
+                    <?php
+                           echo form_fieldset_close();
+                   ?> 
+                 </div>        
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
