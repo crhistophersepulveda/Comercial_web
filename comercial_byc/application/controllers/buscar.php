@@ -1,6 +1,6 @@
 <?php
 
-class buscar extends CI_Controller{
+class Buscar extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();

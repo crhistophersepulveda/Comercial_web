@@ -1,6 +1,6 @@
 <?php
 
-class modificar extends CI_Controller{
+class Modificar extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
@@ -23,5 +23,7 @@ class modificar extends CI_Controller{
 		$datos['modificarcliente'] = $lista_cliente;
 		$this->load->view("Cliente/modificarCliente",$datos);
 	}
+
+
 }
 ?>

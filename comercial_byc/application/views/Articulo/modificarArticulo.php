@@ -316,7 +316,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Modificar Artículo</h1>
+                    <h1 class="page-header">Modificar / Eliminar Artículo</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -348,6 +348,7 @@
                                         foreach ($modificar-> result() as $modificars){
                                             echo "  
                                             <tr>
+                                            <form action=''; method='post';>
                                                 <td>$modificars->idProducto</td>
                                                 <td>$modificars->descripcion</td>
                                                 <td>$modificars->costo</td>
@@ -358,7 +359,7 @@
                                                 <button type='button' class='btn btn-primary btn-circle'> <i class='fa fa-list'></i></button>
                                                 </td>
                                                 <td>
-                                                <button type='button' class='btn btn-warning btn-circle'> <i class='fa fa-times'></i></button>
+                                                <button type='button' class='btn btn-warning btn-circle'><a href=".base_url()."index.php/borrar/borrar_producto/".$modificars->idProducto."/> <i class='fa fa-times'></i></button>
                                                 </td>";       
                                                 }
                                             echo "

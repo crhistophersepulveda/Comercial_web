@@ -22,6 +22,13 @@ class Modelo_model extends CI_Model
 			return $this->db->get('Producto');
 	}
 
+/*--BORRAR PRODUCTOS--*/
+
+	public function borrar_producto($idProducto){
+		$this->db->where ('idProducto',$idProducto);
+		return $this->db->delete('Producto');
+	}
+
 
 
 /*------------------------------------------------------------------------------------/
