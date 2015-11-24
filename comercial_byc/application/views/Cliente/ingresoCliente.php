@@ -151,6 +151,7 @@
                             <a href="#"><i class="fa fa-user fa-fw"></i>Clientes<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
+                                    <!--Direccionar a la funcion index del controlador ingresar clientes-->
                                     <a href="<?php echo base_url() ?>index.php/ingresarCliente/Index"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
@@ -330,6 +331,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default"  >
+                    
                        <?=form_open('http://localhost/Comercial_web/comercial_byc/index.php/ingresarCliente/ingresarcliente');
             //aqui se procesará nuestro formulario, controlador comentarios, función insertar_comentarios
             //creamos los arrays que compondran nuestro formulario
@@ -338,7 +340,7 @@
                     'name' => 'rut',
                     'id' => 'rut',
                     'size' => '50',
-                    'class'=>'form-control' // con esto al procesar el formulario de forma incorrecta quedará guardado el dato que le habíamos puesto
+                    'class'=>'form-control' // darla la clade de boobtstrap
                 );
              
             //el segundo array(campo email)
@@ -394,7 +396,7 @@
                     'value' => set_value('descripcion')
                 );
              
-            //el botón submit de nuestro formulario
+            //el botón submit de nuestro formulario se le da la clase para quedar con boobtstrap
                 $submit = array(
                     'name' => 'submit',
                     'id' => 'submit',
@@ -418,7 +420,7 @@
                                             </div>
                                             <div class="col-md-2">
                                                 <label>Rut</label>
-                                                
+                                                <!--Desplegar campo definido en el arreglo de arriba-->
                                                 <?php echo form_input($rut); ?>
                                             </div>
                                             <div class="col-md-0">

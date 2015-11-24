@@ -7,11 +7,11 @@ class ingresarCliente extends CI_Controller{
 		$this->load->model('modelo_model');
 		$this->load->model('Clientes');
 	}
-
+        // control de direccionamiento
 	public function Index (){
 		$this->load->view("Cliente/ingresoCliente");
 	}
-	
+	// controlador de insercion
 	public function ingresarcliente(){
 		
 		$rut = $this->input->post('rut');
@@ -30,7 +30,7 @@ class ingresarCliente extends CI_Controller{
                 $vendedor_rut = "1";//$this->input->post('vendedor');
                 $lista_precios_lista_precio = "1";//$this->input->post('lista_precio');	
                 //ahora procesamos los datos hacía el modelo que debemos crear
-                $Ingresar_cliente = $this->Clientes->Ingresar_cliente($rut, $nombre, $direccion, $contacto, 
+                $Ingresar_cliente = $this->Clientes->Ingresar_cliente($rut, $nombre, $direccion, $contacto, //llamar a la funcion del modelo
                 $comuna, $ciudad, $rubro, $correo, $telefono, $celular,$web,$condicion_pago, $giro,  $vendedor_rut, 
                 $lista_precios_lista_precio );
                 $this->load->view("Cliente/ingresoCliente");
