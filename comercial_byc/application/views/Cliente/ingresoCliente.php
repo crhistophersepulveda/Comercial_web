@@ -305,19 +305,10 @@
                                 </li>
                             </ul>
                         </li>
-
-
-
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
-
-
-
-
-
-
         </nav>
     </div>
     <div id="page-wrapper">
@@ -332,7 +323,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default"  >
                     
-                       <?=form_open('http://localhost/Comercial_web/comercial_byc/index.php/ingresarCliente/ingresarcliente');
+                       <?=form_open('/index.php/ingresarCliente/ingresarcliente"');
             //aqui se procesará nuestro formulario, controlador comentarios, función insertar_comentarios
             //creamos los arrays que compondran nuestro formulario
             //primer array con el input que se llamará nombre y será donde introduciremos el mismo
