@@ -354,7 +354,7 @@
                                     <tbody>
                                  
                                     <?php 
-                                        foreach ($buscar -> result() as $buscars){
+                                       foreach ($buscar -> result() as $buscars){
                                             echo "  
                                             <tr>
                                                 <td>$buscars->idProducto</td>
@@ -374,8 +374,7 @@
                                       
                                         ";   
                                     ?>
-                                        
-                                    </tbody>
+                                     </tbody>
                                 </table> 
                             </div>
                             <!-- /.table-responsive -->

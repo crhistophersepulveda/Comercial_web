@@ -18,12 +18,24 @@ class Modificar extends CI_Controller{
 		$datos['modificar'] = $lista_articulo;
 		$this->load->view("Articulo/modificarArticulo",$datos);
 	}
-		public function modificarcliente(){
+/*----------------------------------------------------------------------------------
+									CLIENTE
+------------------------------------------------------------------------------------*/
+
+	public function modificarcliente(){
 		$lista_cliente = $this->modelo_model->mostrar_clientes();
 		$datos['modificarcliente'] = $lista_cliente;
 		$this->load->view("Cliente/modificarCliente",$datos);
 	}
 
+/*----------------------------------------------------------------------------------
+									VENDEDOR
+------------------------------------------------------------------------------------*/
 
+	public function modificarvendedor(){
+		$lista_vendedor = $this->modelo_model->mostrar_vendedores();
+		$datos['modificarvendedor'] = $lista_vendedor;
+		$this->load->view("Vendedor/modificarVendedor",$datos);
+	}
 }
 ?>

@@ -47,6 +47,16 @@ class Modelo_model extends CI_Model
 	public function mostrar_vendedores(){
 		return $this->db->get('Vendedor');
 	}
+/*--BORRAR VENDEDOR--*/
+
+	public function borrar_vendedor($rut){
+
+		$this->db->where ('rut',$rut);
+		return $this->db->delete('Vendedor');
+		echo "hola";
+	}
+
+
 
 /*------------------------------------------------------------------------------------/
 								PROVEEDOR

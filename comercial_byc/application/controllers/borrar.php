@@ -21,6 +21,17 @@ public function Index (){
 		redirect("index.php/modificar/modificararticulo");
 	}
 
+/*------------------------------------------------------------------------------------/
+									VENDEDOR
+-------------------------------------------------------------------------------------*/
+
+	public function borrar_vendedor(){
+			$rut = $this->uri->segment(3);
+			$this->modelo_model->borrar_vendedor($rut);
+			redirect("index.php/modificar/modificarvendedor");
+		
+	}
+
 
 
 

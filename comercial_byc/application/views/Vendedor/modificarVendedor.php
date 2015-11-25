@@ -11,20 +11,20 @@
 
     <title>Comercial B & C</title> <!--Titulo pestaña-->
     <!-- Bootstrap Core CSS -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
     <!-- Timeline CSS -->
-    <link href="../dist/css/timeline.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/dist/css/timeline.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/dist/css/sb-admin-2.css" rel="stylesheet">
 
 
     <!-- Custom Fonts -->
-    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url(); ?>assets/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,6 +32,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 
 </head>
 
@@ -340,60 +341,40 @@
                                     <thead>
                                         <tr>
                                             <th>Rut</th>
-                                            <th>Nombre</th>
+                                            <th>Vendedor</th>
+                                            <th>Dirección</th>
                                             <th>Celular</th>
                                             <th>Correo</th>
-                                            <th>Sueldo</th>
-                                            <th>Comisión</th>
+                                            <th>Sueldo Base</th>
+                                            <th>Comisión %</th>
                                             <th>Modificar</th>
+                                            <th>Eliminar</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="odd gradeX">
-                                            <td>10102923-1</td>
-                                            <td>Juan Perez</td>
-                                            <td>08-5432234</td>
-                                            <th>perez@comercialbyc.com</th>
-                                            <td>$ 300.000</td>
-                                            <td>5%
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-circle"> <i class="fa fa-list"></i></button>
+                                    <?php 
+                                        foreach ($modificarvendedor-> result() as $modificarv){
+                                            echo "  
+                                            <tr>
+                                                <td>$modificarv->rut</td>
+                                                <td>$modificarv->nombre</td>
+                                                <td>$modificarv->direccion</td>
+                                                <td>$modificarv->celular</td>
+                                                <td>$modificarv->correo</td>
+                                                <td>$modificarv->sueldo_base</td>
+                                                <td>$modificarv->comision</td>
+                                                <td>
+                                                <button type='button' class='btn btn-primary btn-circle'> <i class='fa fa-list'></i></button>
+                                                </td>
+                                                <td>
+                                                <button type='button' class='btn btn-warning btn-circle'><a href=".base_url()."index.php/borrar/borrar_vendedor/".$modificarv->rut."/> <i class='fa fa-times'></i></button>
+                                                </td>";      
+                                                }
+                                            echo "
+                                            </tr>
+                                        ";   
+                                    ?>
 
-                                            </td> 
-                                            
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td>9383274-1</td>
-                                            <td>Felipe</td>
-                                            <td>09-4322345</td>
-                                            <td>Felipe@comercialbyc.com</td>
-                                            <td>$ 305.000</td>
-                                            <td>
-                                                6%
-
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-circle"> <i class="fa fa-list"></i></button>
-
-                                            </td> 
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td>16948382-1</td>
-                                            <td>Felipe Paredes</td>
-                                            <td>09-92645743</td>
-                                            <td>f.paredes@comercialbyc.com</td>
-                                            <td>$ 350.000</td>
-                                            <td>
-                                                5%
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-circle"> <i class="fa fa-list"></i></button>
-
-                                            </td> 
-                                        </tr>
-                                       
-
-                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -410,16 +391,16 @@
             
     <!-- /#wrapper -->
     <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/bower_components/metisMenu/dist/metisMenu.min.js"></script>
     <!-- DataTables JavaScript -->
-    <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
+    <script src="<?php echo base_url(); ?>assets/dist/js/sb-admin-2.js"></script>
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
         $(document).ready(function () {
