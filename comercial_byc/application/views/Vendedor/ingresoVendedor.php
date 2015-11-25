@@ -2,7 +2,6 @@
 <html lang="en">
 
     <head>
-
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +36,7 @@
     <body>
         <div id="wrapper">
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -310,7 +309,7 @@
                 <!-- /.sidebar-collapse -->
             </div>
 
-        </nav>
+            </nav>
         </div>
 
      <!--******************************************************************************************************************-->
@@ -387,8 +386,8 @@
                                 'name' => 'submit',
                                 'id' => 'submit',
                                 'class'=>'btn btn-default',
-                                'value' => 'Guardar',
-                                'title' => 'Guardar'
+                                'value' => 'Ingresar',
+                                'title' => 'Ingresar'
                             );
                         ?>
 
@@ -443,7 +442,7 @@
                                     <div class="row">
                                          <br />
                                         <div class="col-md-3">
-                                            <button type="submit" class="btn btn-default">Ingresar</button>
+                                             <?php echo form_submit($submit);?>
                                         </div>
                                     </div>
                                 </form>

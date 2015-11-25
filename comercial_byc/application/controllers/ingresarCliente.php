@@ -33,7 +33,7 @@ class ingresarCliente extends CI_Controller{
                 $Ingresar_cliente = $this->Clientes->Ingresar_cliente($rut, $nombre, $direccion, $contacto, //llamar a la funcion del modelo
                 $comuna, $ciudad, $rubro, $correo, $telefono, $celular,$web,$condicion_pago, $giro,  $vendedor_rut, 
                 $lista_precios_lista_precio );
-                $this->load->view("Index/index");
+                redirect('index.php/ingresarCliente/Index');;
         
 	}
 

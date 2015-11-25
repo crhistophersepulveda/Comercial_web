@@ -24,7 +24,7 @@ class ingresarVendedor extends CI_Controller{
                 
                 //ahora procesamos los datos hacía el modelo que debemos crear
                 $Ingresar_vendedor = $this->Vendedor->Ingresar_vendedor($rut, $nombre, $direccion, $celular, $correo, $comision, $sueldo_base);
-                $this->load->view("Index/index");
+                redirect('index.php/ingresarVendedor/Index');
 
         
 	}
