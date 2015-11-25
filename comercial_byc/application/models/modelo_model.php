@@ -53,7 +53,6 @@ class Modelo_model extends CI_Model
 
 		$this->db->where ('rut',$rut);
 		return $this->db->delete('Vendedor');
-		echo "hola";
 	}
 
 

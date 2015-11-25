@@ -173,11 +173,9 @@
                                     <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="glyphicon glyphicon-minus-sign"></i> Modificar<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
                                 </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
-                                </li>
+                                
                                 <li>
                                     <a href="#"><i class="glyphicon glyphicon-remove-circle"></i> Eliminar<span class="fa arrow"></span></a>
                                 </li>
@@ -323,7 +321,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Modificar Vendedor</h1>
+                    <h1 class="page-header">Modificar / Eliminar Vendedor</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -332,7 +330,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                           Modificar Vendedor
+                           Modificar / Eliminar Vendedor
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -364,16 +362,44 @@
                                                 <td>$modificarv->sueldo_base</td>
                                                 <td>$modificarv->comision</td>
                                                 <td>
-                                                <button type='button' class='btn btn-primary btn-circle'> <i class='fa fa-list'></i></button>
+                                                <button type='button' class='btn btn-primary btn-circle' data-toggle='modal' data-target='#myModal' > <i class='fa fa-list'></i></button>
                                                 </td>
                                                 <td>
-                                                <button type='button' class='btn btn-warning btn-circle'><a href=".base_url()."index.php/borrar/borrar_vendedor/".$modificarv->rut."/> <i class='fa fa-times'></i></button>
+                                                <button type='button' class='btn btn-warning btn-circle' data-toggle='modal' data-target='#myModal' > <a href=".base_url()."index.php/borrar/borrar_vendedor/".$modificarv->rut."/><i class='fa fa-times'></i></button>
+                                        <div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' style='display: none;''>
+                                            <div class='modal-dialog'>
+                                                <div class='modal-content'>
+                                                    <div class='modal-header'>
+                                                        <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button>
+                                                        <h4 class='modal-title' id='myModalLabel'>Alerta!</h4>
+                                                    </div>
+                                                    <div class='modal-body'>
+                                                        ¿Realmente quieres eliminar a este vendedor?
+                                                    </div>
+                                                    <div class='modal-footer'>
+                                                        <button type='button' class='btn btn-primary'>Si</button>
+                                                        <button type='button' class='btn btn-default' data-dismiss='modal'>No</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                                 </td>";      
                                                 }
                                             echo "
                                             </tr>
-                                        ";   
+                                            ";  
                                     ?>
+                          
+                            
+
+
+
+
+
+
+
+
+
 
                                     </tbody>
                                 </table>
