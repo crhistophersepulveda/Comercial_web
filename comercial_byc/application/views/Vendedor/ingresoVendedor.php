@@ -1,43 +1,41 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>Comercial B & C</title> <!--Titulo pestaña-->
-    <!-- Bootstrap Core CSS -->
-    <link href="<?php echo base_url(); ?>assets/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <title>Comercial B & C</title> <!--Titulo pestaña-->
+        <!-- Bootstrap Core CSS -->
+        <link href="<?php echo base_url(); ?>assets/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- MetisMenu CSS -->
-    <link href="<?php echo base_url(); ?>assets/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+        <!-- MetisMenu CSS -->
+        <link href="<?php echo base_url(); ?>assets/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
-    <!-- Timeline CSS -->
-    <link href="<?php echo base_url(); ?>assets/dist/css/timeline.css" rel="stylesheet">
+        <!-- Timeline CSS -->
+        <link href="<?php echo base_url(); ?>assets/dist/css/timeline.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="<?php echo base_url(); ?>assets/dist/css/sb-admin-2.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="<?php echo base_url(); ?>assets/dist/css/sb-admin-2.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="<?php echo base_url(); ?>assets/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
 
 
-    <!-- Custom Fonts -->
-    <link href="<?php echo base_url(); ?>assets/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <div id="wrapper">
+    <body>
+        <div id="wrapper">
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -312,175 +310,155 @@
                 <!-- /.sidebar-collapse -->
             </div>
 
-
-
-
-
-
-
         </nav>
-    </div>
-    <div id="page-wrapper">
+        </div>
+
+     <!--******************************************************************************************************************-->
+     <!--************************************************** SEGEMENTO DE LA VISTA ****************************************************************-->
+     <!--******************************************************************************************************************-->
+   
+        <div id="page-wrapper"> <!-- 1 -->
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Ingreso Vendedor</h1>
                 </div>
-                <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default"  >
+               
+            <div class="row"> <!-- 2 -->
+                <div class="col-lg-12"><!-- 3 -->
+                    <div class="panel panel-default"  > <!-- 4 -->
                     
-                       <?=form_open('/index.php/ingresarVendedor/ingresarVendedor"');
-            //aqui se procesará nuestro formulario, controlador comentarios, función insertar_comentarios
-            //creamos los arrays que compondran nuestro formulario
-            //primer array con el input que se llamará nombre y será donde introduciremos el mismo
-                $rut = array(
-                    'name' => 'rut',
-                    'id' => 'rut',
-                    'size' => '50',
-                    'class'=>'form-control' // darla la clade de boobtstrap
-                );
+                        <?=form_open('/index.php/ingresarVendedor/ingresarVendedor"');
+            
+                            $rut = array(
+                                'name' => 'rut',
+                                'id' => 'rut',
+                                'size' => '50',
+                                'class'=>'form-control' // darla la clade de boobtstrap
+                            );
              
-            //el segundo array(campo email)
-              $nombre = array(
-                    'name' => 'nombre',
-                    'id' => 'nombre',
-                    'size' => '50',
-                    'class'=>'form-control' // darla la clade de boobtstrap
-                );
+                            //el segundo array(campo email)
+                            $nombre = array(
+                                'name' => 'nombre',
+                                'id' => 'nombre',
+                                'size' => '50',
+                                'class'=>'form-control' // darla la clade de boobtstrap
+                            );
              
-            //el tercero...(campo asunto)
-                 $direccion = array(
-                    'name' => 'direccion',
-                    'id' => 'direccion',
-                    'size' => '50',
-                    'class'=>'form-control' // darla la clade de boobtstrap
-                );
+                            //el tercero...(campo asunto)
+                            $direccion = array(
+                                'name' => 'direccion',
+                                'id' => 'direccion',
+                                'size' => '50',
+                                'class'=>'form-control' // darla la clade de boobtstrap
+                            );
              
-            //el cuarto...(campo mensaje)
-                 $Celular = array(
-                    'name' => 'celular',
-                    'id' => 'celular',
-                    'size' => '50',
-                    'class'=>'form-control' // darla la clade de boobtstrap
-                );
+                            //el cuarto...(campo mensaje)
+                            $Celular = array(
+                                'name' => 'celular',
+                                'id' => 'celular',
+                                'size' => '50',
+                                'class'=>'form-control' // darla la clade de boobtstrap
+                            );
 
-                 $Correo = array(
-                    'name' => 'correo',
-                    'id' => 'correo',
-                    'size' => '50',
-                    'class'=>'form-control' // darla la clade de boobtstrap
-                );
+                            $Correo = array(
+                                'name' => 'correo',
+                                'id' => 'correo',
+                                'size' => '50',
+                                'class'=>'form-control' // darla la clade de boobtstrap
+                            );
 
-                 $Sueldo = array(
-                    'name' => 'sueldo',
-                    'id' => 'sueldo',
-                    'size' => '50',
-                    'class'=>'form-control' // darla la clade de boobtstrap
-                );
+                            $Sueldo = array(
+                                'name' => 'sueldo',
+                                'id' => 'sueldo',
+                                'size' => '50',
+                                'class'=>'form-control' // darla la clade de boobtstrap
+                            );
 
-                $Comisión = array(
-                    'name' => 'somisión',
-                    'id' => 'Comisión',
-                    'size' => '50',
-                    'class'=>'form-control' // darla la clade de boobtstrap
-                );
+                            $Comisión = array(
+                                'name' => 'comisión',
+                                'id' => 'comisión',
+                                'size' => '50',
+                                'class'=>'form-control' // darla la clade de boobtstrap
+                            );
              
-            //el botón submit de nuestro formulario se le da la clase para quedar con boobtstrap
-                $submit = array(
-                    'name' => 'submit',
-                    'id' => 'submit',
-                    'class'=>'btn btn-default',
-                    'value' => 'Guardar',
-                    'title' => 'Guardar'
-                );
-                ?>
-            <?php
-            ?>
-<div class="panel panel-default"  >
-            <div class="panel-heading">
-                            Ingreso de Vendedor
-                        </div>
-            <div class="panel-body">
-                                                                <form role="form">
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <label>Rut</label>
-                                        <?php echo form_input($rut); ?>
-                                    </div>
-                                    <div class="col-md-0">
-                                    </div>
+                            //el botón submit de nuestro formulario se le da la clase para quedar con boobtstrap
+                            $submit = array(
+                                'name' => 'submit',
+                                'id' => 'submit',
+                                'class'=>'btn btn-default',
+                                'value' => 'Guardar',
+                                'title' => 'Guardar'
+                            );
+                        ?>
 
-                                    <div class="col-md-3">
-                                        <label>Nombre</label>
-                                        <?php echo form_input($nombre); ?>
-                                    </div>
+                        <div class="panel panel-default"  > <!-- 5 -->
+                            <div class="panel-heading">
+                                Ingreso de Vendedor
+                            </div>
+                            <div class="panel-body"> <!-- 6 -->
+                                <form role="form">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label>Rut</label>
+                                            <?php echo form_input($rut); ?>
+                                        </div>
+                                        <div class="col-md-0">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label>Nombre</label>
+                                            <?php echo form_input($nombre); ?>
+                                        </div>
 
-                                    <div class="col-md-5">
-                                        <label>Dirección</label>
-                                       <?php echo form_input($direccion); ?>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <br />
-                                    <div class="col-md-4">
-                                        <label>Celular</label>
-                                        <?php echo form_input($Celular); ?>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label>Correo</label>
-                                        <?php echo form_input($Correo); ?>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <br />
-
-                                    <div class="col-md-2">
-                                        <label>Sueldo</label>
-                                        <?php echo form_input($Sueldo); ?>
+                                        <div class="col-md-5">
+                                            <label>Dirección</label>
+                                            <?php echo form_input($direccion); ?>
+                                        </div>
                                     </div>
 
-
-                                    <div class="col-md-2">
-                                        <label>Comisión</label>
-                                        <input class="form-control" />
+                                    <div class="row">
+                                        <br />
+                                        <div class="col-md-4">
+                                            <label>Celular</label>
+                                            <?php echo form_input($Celular); ?>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Correo</label>
+                                             <?php echo form_input($Correo); ?>
+                                        </div>
                                     </div>
 
-
-                                </div>
-
-                                <div class="row">
-                                    <br />
-                                    <div class="col-md-3">
-                                        <button type="submit" class="btn btn-default">Ingresar</button>
+                                    <div class="row">
+                                        <br />
+                                        <div class="col-md-2">
+                                            <label>Sueldo</label>
+                                            <?php echo form_input($Sueldo); ?>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label>Comisión</label>
+                                            <?php echo form_input($Comisión); ?>
+                                        </div>
                                     </div>
-                                </div>
 
-                            </form>
-                            
-                      
-                    <!-- /.panel -->
-                </div>
-                    <?php
-                           echo form_fieldset_close();
-                   ?> 
-                 </div>        
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-        </div>
-            <!-- /#wrapper -->
-            <!-- jQuery -->
-            <script src="<?php echo base_url(); ?>assets/bower_components/jquery/dist/jquery.min.js"></script>
-            <!-- Bootstrap Core JavaScript -->
-            <script src="<?php echo base_url(); ?>assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-            <!-- Metis Menu Plugin JavaScript -->
-            <script src="<?php echo base_url(); ?>assets/bower_components/metisMenu/dist/metisMenu.min.js"></script>
-            <!-- Custom Theme JavaScript -->
-            <script src="<?php echo base_url(); ?>assets/dist/js/sb-admin-2.js"></script>
-</body>
+                                    <div class="row">
+                                         <br />
+                                        <div class="col-md-3">
+                                            <button type="submit" class="btn btn-default">Ingresar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div><!-- 6 -->
+                        </div> <!-- 5 -->       
+                    </div><!-- 4 -->   
+                </div><!-- 3 -->
+            </div><!-- 2 -->
+        </div><!-- 1 -->
+        <script src="<?php echo base_url(); ?>assets/bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="<?php echo base_url(); ?>assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="<?php echo base_url(); ?>assets/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+        <!-- Custom Theme JavaScript -->
+        <script src="<?php echo base_url(); ?>assets/dist/js/sb-admin-2.js"></script>
+    </body>
 </html>

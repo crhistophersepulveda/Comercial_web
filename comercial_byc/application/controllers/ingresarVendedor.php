@@ -20,11 +20,11 @@ class ingresarVendedor extends CI_Controller{
                 $celular = $this->input->post('celular');
                 $correo = $this->input->post('correo');
                 $sueldo_base = $this->input->post('sueldo');
-                $comision = $this->input->post('comision');
+                $comision = $this->input->post('comisión');
                 
                 //ahora procesamos los datos hacía el modelo que debemos crear
                 $Ingresar_vendedor = $this->Vendedor->Ingresar_vendedor($rut, $nombre, $direccion, $celular, $correo, $comision, $sueldo_base);
-                $this->load->view("vendedor/ingresoVendedor");
+                $this->load->view("Index/index");
 
         
 	}

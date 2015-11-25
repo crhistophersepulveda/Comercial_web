@@ -10,6 +10,7 @@ class Vendedor extends CI_Model
 
     function Ingresar_vendedor($rut, $nombre, $direccion, $celular, $correo, $comision, $sueldo_base){
         $data = array(
+            
             'rut' => $rut,
             'nombre' => $nombre,
             'direccion' => $direccion,
