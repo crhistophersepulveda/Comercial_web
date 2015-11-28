@@ -472,18 +472,27 @@
                                         <br />
                                         <div class="col-md-2">
                                             <label>Vendedor</label>
-                                            <select class="form-control" name="vendedor"  >
-                                                <option></option>
-                                                <option>Marcelo</option>
-                                                <option>Luis</option>
-                                            </select>
+                                            <select class="form-control" name="Vendedor">
+                                            <?php 
+                                            // a si se hacen estas malditas consultas <3 
+                                            $sql=$this->db->query('select nombre from Vendedor');
+
+                                            foreach($sql->result() as $result){
+                                                echo "<option>$result->nombre</option>";
+                                            }
+                                            ?>
+                                        </select>
                                         </div>
                                         <div class="col-md-2">
                                             <label>Lista de Precio</label>
                                             <select class="form-control" name="lista_precio"  >
-                                                <option>Ferretera</option>
-                                                <option>Especialista</option>
-                                                <option>Constructora</option>
+                                                <?php 
+                                            // a si se hacen estas malditas consultas <3 
+                                            $sql=$this->db->query('select Lista_precio from Lista_precios');
+                                            foreach($sql->result() as $result){
+                                                echo "<option>$result->Lista_precio</option>";
+                                            }
+                                            ?>
                                             </select>
                                         </div>
 

@@ -343,11 +343,19 @@
                                             <th>Contacto</th>
                                             <th>Celular</th>
                                             <th>Correo</th>
+                                            <th>Vendedor</th>
+                                            <th>Lista Precio</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php 
                                         foreach ($bcliente -> result() as $bclientes){
+                                            //realizo las consultas 
+
+                                            //select para sacar el nombre del vendedor deacuerdo al id del cliente
+                                          $sql=$this->db->query("select nombre from Vendedor where rut='$bclientes->Vendedor_rut'");
+                                          //select para sacar el nombre de la lista de precios deacuerdo al id del cliente.
+                                          $sql2=$this->db->query("select Lista_precio from Lista_precios where Lista_precio = '$bclientes->Lista_precios_Lista_precio'") ;
                                             echo "  
                                             <tr>
                                                 <td>$bclientes->rut</td>
@@ -355,13 +363,39 @@
                                                 <td>$bclientes->contacto</td>
                                                 <td>$bclientes->celular</td>
                                                 <td>$bclientes->correo</td>
-                                                ";       
+                                                
+                                                ";
+                                                //para rescatar el valor de nuestro select
+                                                foreach($sql -> result() as $result){
+                                                echo "<td>$result->nombre</td>";
+                                            }
+                                                foreach($sql2 -> result() as $result2){
+                                                    echo
+                                                    "<td>$result2->Lista_precio</td>";
                                                 }
+
+                                            }
                                             echo "
                                             </tr>
                                       
                                         ";   
                                     ?>
+
+
+                                            <?php 
+                                            // a si se hacen estas malditas consultas <3 
+                                           /* $sql=$this->db->query('select Lista_precio from Lista_precios');
+
+                                            foreach($sql->result() as $result){
+                                                echo "<option>$result->Lista_precio</option>";
+                                            }*/
+                                            ?>
+
+
+
+
+
+
                                     </tbody>
                                 </table>
                             </div>
