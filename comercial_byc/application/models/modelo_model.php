@@ -50,8 +50,7 @@ class Modelo_model extends CI_Model
 /*--BORRAR VENDEDOR--*/
 
 	public function borrar_vendedor($rut){
-
-		$this->db->where ('rut',$rut);
+		$this->db->where('rut',$rut['idd']);
 		return $this->db->delete('Vendedor');
 	}
 

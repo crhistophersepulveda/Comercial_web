@@ -354,7 +354,8 @@
                                         foreach ($modificarvendedor-> result() as $modificarv){
                                             echo "  
                                             <tr>
-                                                <td>$modificarv->rut</td>
+                                            <form method='post' action='";?><?php echo base_url() ?><?echo"index.php/borrar/borrar_vendedor'>
+                                                <td><input type='hidden' value='$modificarv->rut' name='valor_enviar'>$modificarv->rut</td>
                                                 <td>$modificarv->nombre</td>
                                                 <td>$modificarv->direccion</td>
                                                 <td>$modificarv->celular</td>
@@ -365,24 +366,8 @@
                                                 <button type='button' class='btn btn-primary btn-circle' data-toggle='modal' data-target='#myModal' > <i class='fa fa-list'></i></button>
                                                 </td>
                                                 <td>
-                                                <button type='button' class='btn btn-warning btn-circle' data-toggle='modal' data-target='#myModal' > <a href=".base_url()."index.php/borrar/borrar_vendedor/".$modificarv->rut."/><i class='fa fa-times'></i></button>
-                                        <div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' style='display: none;''>
-                                            <div class='modal-dialog'>
-                                                <div class='modal-content'>
-                                                    <div class='modal-header'>
-                                                        <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button>
-                                                        <h4 class='modal-title' id='myModalLabel'>Alerta!</h4>
-                                                    </div>
-                                                    <div class='modal-body'>
-                                                        ¿Realmente quieres eliminar a este vendedor?
-                                                    </div>
-                                                    <div class='modal-footer'>
-                                                        <button type='button' class='btn btn-primary'>Si</button>
-                                                        <button type='button' class='btn btn-default' data-dismiss='modal'>No</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                                <center><input type='submit'  value='Eliminar' > 
+                                                
                                                 </td>";      
                                                 }
                                             echo "
