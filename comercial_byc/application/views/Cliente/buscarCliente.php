@@ -380,22 +380,6 @@
                                       
                                         ";   
                                     ?>
-
-
-                                            <?php 
-                                            // a si se hacen estas malditas consultas <3 
-                                           /* $sql=$this->db->query('select Lista_precio from Lista_precios');
-
-                                            foreach($sql->result() as $result){
-                                                echo "<option>$result->Lista_precio</option>";
-                                            }*/
-                                            ?>
-
-
-
-
-
-
                                     </tbody>
                                 </table>
                             </div>
