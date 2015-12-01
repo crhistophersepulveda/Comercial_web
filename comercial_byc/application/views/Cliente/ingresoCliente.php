@@ -342,53 +342,84 @@
                                 'name' => 'nombre',
                                 'id' => 'nombre',
                                 'size' => '50',
-                                'style' => 'width:50%',
-                                'id' => 'email',
-                                'value' => set_value('nombre')
+                                'class'=>'form-control'
                             );
              
                             //el tercero...(campo asunto)
-                            $apellido = array(
-                                'name' => 'apellido',
-                                'id' => 'asunto',
+                            $direccion = array(
+                                'name' => 'direccion',
+                                'id' => 'direccion',
                                 'size' => '50',
-                                'style' => 'width:50%',
-                                'value' => set_value('apellido')
+                                'class'=>'form-control'
                             );
              
                             //el cuarto...(campo mensaje)
-                            $monto = array(
-                                'name' => 'monto',
-                                'id' => 'monto',
-                                'rows' => 10,
-                                'cols' => 40,
-                                'value' => set_value('monto')
+                            $contacto = array(
+                                'name' => 'contacto',
+                                'id' => 'contacto',
+                                'class'=>'form-control'
                             );
 
-                            $email = array(
-                                'name' => 'email',
-                                'id' => 'email',
-                                'rows' => 10,
-                                'cols' => 40,
-                                'value' => set_value('email')
+                            $comuna = array(
+                                'name' => 'comuna',
+                                'id' => 'comuna',
+                                'class'=>'form-control'
                             );
 
-                            $fechat = array(
-                                'name' => 'fechat',
-                                'id' => 'fechat',
-                                'rows' => 10,
-                                'cols' => 40,
-                                'value' => set_value('fechat')
+                            $ciudad = array(
+                                'name' => 'ciudad',
+                                'id' => 'ciudad',
+                                'class'=>'form-control'
                             );
 
-                            $descripcion = array(
-                                'name' => 'descripcion',
-                                'id' => 'descripcion',
-                                'rows' => 10,
-                                'cols' => 40,
-                                'value' => set_value('descripcion')
+                            $rubro = array(
+                                'name' => 'rubro',
+                                'id' => 'rubro',
+                                'class'=>'form-control'
                             );
-             
+
+                            $correo = array(
+                                'name' => 'correo',
+                                'id' => 'correo',
+                                'class'=>'form-control'
+                            );
+
+                            $telefono = array(
+                                'name' => 'telefono',
+                                'id' => 'telefono',
+                                'class'=>'form-control'
+                            );
+
+                            $celular = array(
+                                'name' => 'celular',
+                                'id' => 'celular',
+                                'class'=>'form-control'
+                            );
+
+                            $web = array(
+                                'name' => 'web',
+                                'id' => 'web',
+                                'class'=>'form-control'
+                            );
+
+                            $condicion_pago = array(
+                                'name' => 'condicion_pago',
+                                'id' => 'condicion_pago',
+                                'class'=>'form-control'
+                            );
+                            
+                            $giro = array(
+                                'name' => 'giro',
+                                'id' => 'giro',
+                                'class'=>'form-control'
+                            ); 
+
+                            $lista_precio = array(
+                                'name' => 'lista_precio',
+                                'id' => 'lista_precio',
+                                'class'=>'form-control'
+                            );
+
                             //el botón submit de nuestro formulario se le da la clase para quedar con boobtstrap
                             $submit = array(
                                 'name' => 'submit',
@@ -397,6 +428,8 @@
                                 'value' => 'Guardar',
                                 'title' => 'Guardar'
                             );
+
+
                         ?>
 
                         <div class="panel panel-default"  ><!-- 5 -->
@@ -407,45 +440,49 @@
 
                             <div class="panel-body"><!-- 6 -->
                                 <form >
+
                                     <div class="row">
                                         <div class="col-md-2">
-                                            <label>Codigo</label>
-                                            <input class="form-control" name='codigo'  />
-                                        </div>
-                                        <div class="col-md-2">
                                             <label>Rut</label>
-                                            <!--Desplegar campo definido en el arreglo de arriba-->
                                             <?php echo form_input($rut); ?>
                                         </div>
-                                        <div class="col-md-0">
-                                        </div>
-
-                                        <div class="col-md-3">
-                                            <label>Contacto</label>
-                                            <input class="form-control" name="contacto"/>
-                                        </div>
-
                                         <div class="col-md-5">
                                             <label>Razón Social</label>
-                                            <input class="form-control" name="razon_social"/>
+                                            <?php echo form_input($nombre); ?>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label>rubro</label>
+                                             <?php echo form_input($rubro); ?>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label>Contacto</label>
+                                            <?php echo form_input($contacto); ?>
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <br />
-                                        <div class="col-md-4">
+                                        <div class="col-md-5">
+                                            <label>Giro</label>
+                                            <?php echo form_input($giro); ?>
+                                        </div>
+                                        <div class="col-md-5">
                                             <label>Dirección</label>
-                                            <input class="form-control" name="direccion" />
+                                            <?php echo form_input($direccion); ?>
                                         </div>
                                         <div class="col-md-2">
-                                            <label>Región</label>
-                                            <select class="form-control" name="region" >
-                                                <option></option>
-                                                <option>Maule</option>
-                                                <option>Rancagua</option>
-                                            </select>
-                                        </div>
+                                            <label>comuna</label>
+                                             <?php echo form_input($comuna); ?>
+                                        </div>  
+                                    </div>
 
+
+                                    <div class="row">
+                                        <br />
+                                        <div class="col-md-2">
+                                            <label>ciudad</label>
+                                             <?php echo form_input($ciudad); ?>
+                                        </div>
                                         <div class="col-md-2">
                                             <label>Celular</label>
                                             <input class="form-control" name="celular"  />
@@ -453,35 +490,35 @@
 
                                         <div class="col-md-2">
                                             <label>Telefono</label>
-                                            <input class="form-control" name="telefono"  />
+                                             <?php echo form_input($telefono); ?>
                                         </div>
-                                    </div>
+                                        <div class="col-md-2">
+                                            <label>Condicion de pago</label>
+                                            <?php echo form_input($condicion_pago); ?>
+                                        </div>
+                                    </div> 
+
                                     <div class="row">
                                         <br />
                                         <div class="col-md-2">
                                             <label>Correo</label>
-                                            <input class="form-control" name="correo"  />
+                                           <?php echo form_input($correo); ?>
                                         </div>
-                                    
                                         <div class="col-md-2">
                                             <label>Pagina Web</label>
-                                            <input class="form-control" name="web" />
+                                            <?php echo form_input($web); ?>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <br />
                                         <div class="col-md-2">
                                             <label>Vendedor</label>
-                                            <select class="form-control" name="Vendedor">
+                                            <select class="form-control" name="vendedor"  >
                                             <?php 
                                             // a si se hacen estas malditas consultas <3 
-                                            $sql=$this->db->query('select nombre from Vendedor');
-
+                                            $sql=$this->db->query('select rut from Vendedor');
                                             foreach($sql->result() as $result){
-                                                echo "<option>$result->nombre</option>";
+                                                echo "<option>$result->rut</option>";
                                             }
                                             ?>
-                                        </select>
+                                            </select>
                                         </div>
                                         <div class="col-md-2">
                                             <label>Lista de Precio</label>
@@ -495,7 +532,6 @@
                                             ?>
                                             </select>
                                         </div>
-
                                     </div>
 
                                     <div class="row">
