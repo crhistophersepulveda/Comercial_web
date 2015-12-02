@@ -6,6 +6,8 @@ class ingresarCliente extends CI_Controller{
 		parent::__construct();
 		$this->load->model('modelo_model');
 		$this->load->model('Clientes');
+                $this->load->model('Proveedor');
+
 	}
         // control de direccionamiento
 	public function Index (){
