@@ -16,6 +16,7 @@ public function Index (){
 -------------------------------------------------------------------------------------*/
 
 	public function borrar_producto(){
+		
 		$idProducto = $this->uri->segment(3);
 		$this->modelo_model->borrar_producto($idProducto);
 		redirect("index.php/modificar/modificararticulo");
@@ -26,6 +27,7 @@ public function Index (){
 -------------------------------------------------------------------------------------*/
 
 	public function borrar_vendedor(){
+
 		$rut = array('idd' => $this->input->post('valor_enviar'));
 		echo "el rut es: ".$rut['idd'];
 		$this->modelo_model->borrar_vendedor($rut);
