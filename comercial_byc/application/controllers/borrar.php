@@ -26,7 +26,6 @@ public function Index (){
 -------------------------------------------------------------------------------------*/
 
 	public function borrar_vendedor(){
-
 		$rut = array('idd' => $this->input->post('valor_enviar'));
 		echo "el rut es: ".$rut['idd'];
 		$this->modelo_model->borrar_vendedor($rut);

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-   <title>Comercial B & C</title> <!--Titulo pestaña-->
+    <title>Comercial B & C</title> <!--Titulo pestaña-->
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url(); ?>assets/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,7 +32,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
@@ -213,11 +212,8 @@
                                         <li>
                                             <a href="#">Lista de Artículos Detallado</a>
                                         </li>
-
                                     </ul>
-                                    <!-- /.nav-third-level -->
                                 </li>
-
                                 <li>
                                     <a href="#"><i class="fa fa-shopping-cart"></i> Ventas<span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level">
@@ -239,9 +235,6 @@
                                     </ul>
                                     <!-- /.nav-third-level -->
                                 </li>
-
-
-
                                 <li>
                                     <a href="#"><i class="fa fa-shopping-cart"></i> Compras<span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level">
@@ -265,7 +258,6 @@
                                 </li>
                                 <li>
                                     <a href="#"><i class="fa fa-user fa-fw"></i>Clientes<span class="fa arrow"></span></a>
-
                                     <ul class="nav nav-third-level">
                                         <li>
                                             <a href="#">Lista Clientes</a>
@@ -273,13 +265,11 @@
                                         <li>
                                             <a href="#">Clientes Frecuentes</a>
                                         </li>
-
                                     </ul>
                                     <!-- /.nav-third-level -->
                                 </li>
                                 <li>
                                     <a href="#"><i class="fa fa-user fa-fw"></i>Vendedores<span class="fa arrow"></span></a>
-
                                     <ul class="nav nav-third-level">
                                         <li>
                                             <a href="#">Lista Vendedores</a>
@@ -301,18 +291,11 @@
                                 </li>
                             </ul>
                         </li>
-
-
-
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
-
-
-
     </nav>
-    </div>
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
@@ -324,9 +307,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                           Modificar Artículo
-                        </div>
+                        <div class="panel-heading">Modificar Artículo</div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="dataTable_wrapper">
@@ -364,14 +345,12 @@
                                                 }
                                             echo "
                                             </tr>
-                                      
-                                        ";   
-                                    ?>
+                                            ";   
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
                             <!-- /.table-responsive -->
-                           
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -381,7 +360,6 @@
             </div>
             <!-- /.row -->
             
-    <!-- /#wrapper -->
     <!-- jQuery -->
     <script src="<?php echo base_url(); ?>assets/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->

@@ -32,13 +32,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
 </head>
-
 <body>
-
-    <div id="wrapper">
 
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -303,26 +298,15 @@
                             </ul>
                         </li>
 
-
-
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
-
-
-
-
-
-
-
         </nav>
-    </div>
+        
         <div id="page-wrapper">
             <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Modificar / Eliminar Vendedor</h1>
-                </div>
+                <div class="col-lg-12"><h1 class="page-header">Modificar / Eliminar Vendedor</h1></div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
@@ -347,6 +331,7 @@
                                             <th>Comisión %</th>
                                             <th>Modificar</th>
                                             <th>Eliminar</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -354,8 +339,8 @@
                                         foreach ($modificarvendedor-> result() as $modificarv){
                                             echo "  
                                             <tr>
-                                            <form method='post' action='";?><?php echo base_url() ?><?echo"index.php/borrar/borrar_vendedor'>
-                                                <td><input type='hidden' value='$modificarv->rut' name='valor_enviar'>$modificarv->rut</td>
+                                            <form method='post' action='";?><?php echo base_url() ;?><?echo"index.php/borrar/borrar_vendedor'>
+                                                <td><input type='hidden' value='$modificarv->rut' name='valor_enviar'>$modificarv->rut</input></td>
                                                 <td>$modificarv->nombre</td>
                                                 <td>$modificarv->direccion</td>
                                                 <td>$modificarv->celular</td>
@@ -366,31 +351,37 @@
                                                 <button type='button' class='btn btn-primary btn-circle' data-toggle='modal' data-target='#myModal' > <i class='fa fa-list'></i></button>
                                                 </td>
                                                 <td>
-                                                <center><input type='submit'  value='Eliminar' > 
+                                                <button type='button' class='btn btn-warning btn-circle' data-toggle='modal' data-target='#Eliminar_ventana' > <i class='fa fa-times'></i></button>
                                                 
-                                                </td>";      
+                                                   <div class='modal fade in' id='Eliminar_ventana' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' style='display: none;''>
+                                                        <div class='modal-dialog'>
+                                                            <div class='modal-content'>
+                                                                <div class='modal-header'>
+                                                                    <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button>
+                                                                    <h4 class='modal-title' id='myModalLabel'>¡Atención!</h4>
+                                                                </div>
+                                                                <div class='modal-body'>
+                                                                ¿Seguro que deseas <b>Eliminar</b>?    
+                                                                </div>
+                                                                <div class='modal-footer'>
+                                                                    <button type='submit' class='btn btn-primary' value='Eliminar'>Confirmar</button>
+                                                                    <button type='button' class='btn btn-default' data-dismiss='modal'>Cancelar</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </td>
+                                            </form>
+                                                ";      
                                                 }
                                             echo "
-                                            </tr>
-                                            ";  
+                                            </tr>";  
                                     ?>
-                          
-                            
-
-
-
-
-
-
-
-
-
-
+                                    
                                     </tbody>
                                 </table>
                             </div>
                             <!-- /.table-responsive -->
-                           
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -399,9 +390,7 @@
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-            
-    <!-- /#wrapper -->
-    <!-- jQuery -->
+        </div>
     <script src="<?php echo base_url(); ?>assets/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo base_url(); ?>assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
