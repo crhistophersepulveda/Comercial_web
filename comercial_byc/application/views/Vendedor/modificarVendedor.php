@@ -351,9 +351,9 @@
                                                 <button type='button' class='btn btn-primary btn-circle' data-toggle='modal' data-target='#myModal' > <i class='fa fa-list'></i></button>
                                                 </td>
                                                 <td>
-                                                <button type='button' class='btn btn-warning btn-circle' data-toggle='modal' data-target='#Eliminar_ventana' > <i class='fa fa-times'></i></button>
+                                                <button type='button' class='btn btn-warning btn-circle' data-toggle='modal' data-target='#$modificarv->rut' > <i class='fa fa-times'></i></button>
                                                 
-                                                   <div class='modal fade in' id='Eliminar_ventana' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' style='display: none;''>
+                                                   <div class='modal fade in' id='$modificarv->rut' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' style='display: none;''>
                                                         <div class='modal-dialog'>
                                                             <div class='modal-content'>
                                                                 <div class='modal-header'>
