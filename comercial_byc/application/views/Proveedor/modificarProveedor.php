@@ -32,12 +32,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
-
 <body>
-
-    <div id="wrapper">
 
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -80,8 +76,7 @@
             <!-- /.navbar-top-links -->
             <!--MODULO DERECHO AQUIIIIII ABAJO-->
 
-   
-   
+       
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
@@ -151,7 +146,7 @@
                             <a href="#"><i class="fa fa-user fa-fw"></i>Clientes<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                                    <a href="<?php echo base_url() ?>index.php/ingresarCliente/"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
                                 </li>
                                 <li>
                                     <a href="<?php echo base_url() ?>index.php/modificar/modificarcliente"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
@@ -187,13 +182,13 @@
                         <a href="#"><i class="fa fa-user fa-fw"></i>Proveedor<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
+                                <a href="<?php echo base_url() ?>index.php/ingresarVendedor"><i class="glyphicon glyphicon-plus-sign"></i> Ingresar<span class="fa arrow"></span></a>
                             </li>
                             <li>
-                                <a href="#"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
+                                <a href="<?php echo base_url() ?>index.php/modificarProveedor/modificarProveedor"><i class="glyphicon glyphicon-minus-sign"></i> Modificar / Eliminar<span class="fa arrow"></span></a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
+                                <a href="<?php echo base_url() ?>index.php/buscar/buscarProveedor"><i class="fa fa-search-plus"></i> Buscar<span class="fa arrow"></span></a>
                             </li>
                            
                         </ul>
@@ -303,25 +298,15 @@
                             </ul>
                         </li>
 
-
-
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
-
-
-
-
-
-
         </nav>
-    </div>
+        
         <div id="page-wrapper">
             <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Modificar / Eliminar Proveedor</h1>
-                </div>
+                <div class="col-lg-12"><h1 class="page-header">Modificar / Eliminar Proveedor</h1></div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
@@ -338,41 +323,122 @@
                                     <thead>
                                         <tr>
                                             <th>Rut</th>
-                                            <th>Razón Social</th>
+                                            <th>Razon Social</th>
                                             <th>Contacto</th>
+                                            <th>Dirección</th>
                                             <th>Celular</th>
                                             <th>Correo</th>
+                                            <th>Web</th>
+                                            <th>Descuento %</th>
                                             <th>Modificar</th>
                                             <th>Eliminar</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
-                                       <?php 
-                                        foreach ($modificarcliente-> result() as $modificarc){
+
+                                    <!-- ATENCION: EL PRIMER MODAL CORRESPONDE AL MENSAJE DE ELIMACION MIENTRAS QUE EL SEGUNDO ES PARA MODIFICAR DATOS -->
+                                  
+                                    <?php 
+
+                                        foreach ($modificarproveedor-> result() as $modificarp){
                                             echo "  
                                             <tr>
-                                                <td>$modificarc->rut</td>
-                                                <td>$modificarc->nombre_razon</td>
-                                                <td>$modificarc->contacto</td>
-                                                <td>$modificarc->celular</td>
-                                                <td>$modificarc->correo</td>
+                                            <form method='post' action='";?><?php echo base_url() ;?><?echo"index.php/borrar/borrar_proveedor'>
+                                                <td><input type='hidden' value='$modificarp->rut' name='valor_enviar'>$modificarp->rut</input></td>
+                                                <td>$modificarp->razon_social</td>
+                                                <td>$modificarp->contacto</td>
+                                                <td>$modificarp->direccion</td>
+                                                <td>$modificarp->celular</td>
+                                                <td>$modificarp->correo</td>
+                                                <td>$modificarp->web</td>
+                                                <td>$modificarp->descuento_asig</td>
                                                 <td>
-                                                <button type='button' class='btn btn-primary btn-circle'> <i class='fa fa-list'></i></button>
+                                                <button type='button' class='btn btn-primary btn-circle' data-toggle='modal' data-target='#2$modificarp->rut' > <i class='fa fa-list'></i></button>
                                                 </td>
                                                 <td>
-                                                <button type='button' class='btn btn-warning btn-circle'> <i class='fa fa-times'></i></button>
-                                                </td>";       
+                                                
+                                                <button type='button' class='btn btn-warning btn-circle' data-toggle='modal' data-target='#$modificarp->rut' > <i class='fa fa-times'></i></button>
+                                                   <div class='modal fade in' id='$modificarp->rut' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' style='display: none;''>
+                                                        <div class='modal-dialog'>
+                                                            <div class='modal-content'>
+                                                                <div class='modal-header'>
+                                                                    <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button>
+                                                                    <h4 class='modal-title' id='myModalLabel'>¡Atención!</h4>
+                                                                </div>
+                                                                <div class='modal-body'>
+                                                                ¿Seguro que deseas <b>Eliminar</b>?    
+                                                                </div>
+                                                                <div class='modal-footer'>
+                                                                    <button type='submit' class='btn btn-primary' value='Eliminar'>Confirmar</button>
+                                                                    <button type='button' class='btn btn-default' data-dismiss='modal'>Cancelar</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                  </form>
+
+
+                                                    <div class='modal fade in' id='2$modificarp->rut' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' style='display: none;''>
+                                                        <div class='modal-dialog'>
+                                                            <div class='modal-content'>
+                                                                <div class='modal-header'>
+                                                                    <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button>
+                                                                    <h4 class='modal-title' id='myModalLabel'>Modificar</h4>
+                                                                </div>
+                                                                <div class='modal-body'>
+                                                                    <form method='post' action='";?><?php echo base_url() ;?><?echo"index.php/modificarProveedor/modificarproveedor'>
+                                                                        
+                                                                        <div class='row'>
+                                                                              <label style='margin-left: 15px'>   Rut: $modificarp->rut</label>
+                                                                              <input type='hidden' value='$modificarp->rut' name='rut'>
+                                                                              <label style='margin-left: 30px'>   Razon Social: $modificarp->razon_social</label>
+                                                                              <input type='hidden' value='$modificarp->razon_social' name='razon_social'>
+                                                                        </div>
+                                                                        <br/>
+                                                                        <div class='row'>
+                                                                             
+                                                                                <label style='margin-left:15px'>Contacto: </label>
+                                                                                <input style ='margin-left:10px'value='$modificarp->contacto' class='form-control' name='contacto'/>
+                                                                                <label style='margin-left: 15px' >Dirección: </label>
+                                                                                <input style ='margin-left:27px' value='$modificarp->direccion' class='form-control' name='direccion'/>
+                                                                        </div>
+
+                                                                        <br/>
+                                                                        
+                                                                        <div class='row'>
+                                                                            <label style='margin-left: 15px'>Celular: </label>
+                                                                            <input style ='margin-left:24px' value='$modificarp->celular' class='form-control' name='celular'/>
+                                                                            <label style='margin-left: 15px'>Correo: </label>
+                                                                            <input style ='margin-left:45px' value='$modificarp->correo' class='form-control' name='correo'/>
+
+                                                                        </div>
+                                                                        <br/>
+
+                                                                        <div class='row'>
+                                                                                 <label style='margin-left: 15px' >Web: </label>
+                                                                                <input style ='margin-left:42px' value='$modificarp->web' class='form-control' name='web'/>
+                                                                                 <label style='margin-left: 15px'>Descuento %: </label>
+                                                                                <input value='$modificarp->descuento_asig' class='form-control' name='descuento_asig'/>
+                                                                        </div>
+                                                                        <div class='modal-footer'>
+                                                                            <button type='submit' class='btn btn-primary' value='Eliminar'>Modificar</button>
+                                                                        </div>
+                                                                   </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                     
+                                                </td>
+                                                ";      
                                                 }
                                             echo "
-                                            </tr>
-                                      
-                                        ";   
+                                            </tr>";  
                                     ?>
+                                    <!-- ATENCION: EL PRIMER MODAL CORRESPONDE AL MENSAJE DE ELIMACION MIENTRAS QUE EL SEGUNDO ES PARA MODIFICAR DATOS -->
                                     </tbody>
                                 </table>
                             </div>
                             <!-- /.table-responsive -->
-                           
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -381,10 +447,8 @@
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-            
-    <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="<?php echo base_url(); ?>assets/bower_components/jquery/dist/jquery.min.js"></script>
+        </div>
+     <script src="<?php echo base_url(); ?>assets/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo base_url(); ?>assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Metis Menu Plugin JavaScript -->
@@ -402,5 +466,6 @@
             });
         });
     </script>
+
 </body>
 </html>

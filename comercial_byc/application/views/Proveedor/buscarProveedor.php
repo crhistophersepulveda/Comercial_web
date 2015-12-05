@@ -36,7 +36,6 @@
 </head>
 
 <body>
-
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -319,7 +318,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Buscar Cliente</h1>
+                    <h1 class="page-header">Buscar Proveedor</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -328,7 +327,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                           Busqueda Cliente
+                           Busqueda Proveedor
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -337,29 +336,33 @@
                                     <thead>
                                         <tr>
                                             <th>Rut</th>
-                                            <th>Razón Social</th>
+                                            <th>Razon Social</th>
                                             <th>Contacto</th>
+                                            <th>Dirección</th>
                                             <th>Celular</th>
                                             <th>Correo</th>
+                                            <th>Web</th>
+                                            <th>Descuento %</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php 
-                                        foreach ($bcliente -> result() as $bclientes){
+                                        foreach ($bproveedor -> result() as $bproveedors){
                                             echo "  
                                             <tr>
-                                                <td>$bclientes->rut</td>
-                                                <td>$bclientes->nombre_razon</td>
-                                                <td>$bclientes->contacto</td>
-                                                <td>$bclientes->celular</td>
-                                                <td>$bclientes->correo</td>
+                                                <td>$bproveedors->rut</td>
+                                                <td>$bproveedors->razon_social</td>
+                                                <td>$bproveedors->contacto</td>
+                                                <td>$bproveedors->direccion</td>
+                                                <td>$bproveedors->celular</td>
+                                                <td>$bproveedors->correo</td>
+                                                <td>$bproveedors->web</td>
+                                                <td>$bproveedors->descuento_asig</td>
                                                 ";       
                                                 }
                                             echo "
-                                            </tr>
-                                      
-                                        ";   
-                                    ?>
+                                            </tr>";   
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>

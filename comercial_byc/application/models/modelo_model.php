@@ -64,7 +64,10 @@ class Modelo_model extends CI_Model
 	public function mostrar_proveedor(){
 			return $this->db->get('Proveedor');
 	}
-
+	public function borrar_proveedor($rut){
+		$this->db->where ('rut',$rut['idd']);
+		return $this->db->delete('Proveedor');
+	}
 
 
 }
