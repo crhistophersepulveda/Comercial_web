@@ -28,7 +28,7 @@ class modificarVendedor extends CI_Controller{
                 $sueldo_base = $this->input->post('sueldo_base');
                 //ahora procesamos los datos hacía el modelo que debemos crear
                 $modificar_vendedor = $this->Vendedor->Modificar_vendedor($rut, $nombre, $direccion, $celular, $correo, $comision, $sueldo_base);
-                redirect('index.php/modificarVendedor/Index');;
+                redirect('index.php/modificarVendedor');;
         
 	}
 
