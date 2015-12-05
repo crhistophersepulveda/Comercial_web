@@ -316,7 +316,8 @@
                         <div class="panel-heading">
                            Modificar / Eliminar Vendedor
                         </div>
-                         <?php echo validation_errors(); ?>
+                        <?php echo validation_errors(); ?>
+
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="dataTable_wrapper">
@@ -344,7 +345,7 @@
                                         foreach ($modificarvendedor-> result() as $modificarv){
                                             echo "  
                                             <tr>
-                                            <form method='post' action='";?><?php echo base_url() ;?><?echo"index.php/borrar/borrar_vendedor'>
+                                            <form method='post' action='";?><?php echo base_url() ;?><?echo"index.php/borrarVendedor/borrar_vendedor'>
                                                 <td><input type='hidden' value='$modificarv->rut' name='valor_enviar'>$modificarv->rut</input></td>
                                                 <td>$modificarv->nombre</td>
                                                 <td>$modificarv->direccion</td>

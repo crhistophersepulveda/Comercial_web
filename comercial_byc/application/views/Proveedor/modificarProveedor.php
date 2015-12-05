@@ -344,7 +344,7 @@
                                         foreach ($modificarproveedor-> result() as $modificarp){
                                             echo "  
                                             <tr>
-                                            <form method='post' action='";?><?php echo base_url() ;?><?echo"index.php/borrar/borrar_proveedor'>
+                                            <form method='post' action='";?><?php echo base_url() ;?><?echo"index.php/borrarProveedor/borrar_proveedor'>
                                                 <td><input type='hidden' value='$modificarp->rut' name='valor_enviar'>$modificarp->rut</input></td>
                                                 <td>$modificarp->razon_social</td>
                                                 <td>$modificarp->contacto</td>

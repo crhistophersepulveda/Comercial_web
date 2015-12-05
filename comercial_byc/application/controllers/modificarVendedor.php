@@ -31,6 +31,7 @@ class modificarVendedor extends CI_Controller{
                 redirect('index.php/modificarVendedor');;
         
 	}
+        
 
 }
 ?>
