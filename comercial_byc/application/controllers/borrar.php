@@ -38,6 +38,7 @@ class Borrar extends CI_Controller{
         $this->form_validation->set_rules('valor_enviar','valor_enviar','trim|callback_Verificar_cliente');
                         
 
+<<<<<<< HEAD
         if (!$this->form_validation->run())
             {
                 //si no pasamos la validación volvemos al formulario mostrando los errores
@@ -58,6 +59,19 @@ class Borrar extends CI_Controller{
         
         $sql = " SELECT ve.rut from Vendedor ve , Cliente cl where cl.Vendedor_rut = ? and cl.Vendedor_rut=ve.rut ";
         $query = $this->db->query($sql,array($rut));
+=======
+/*------------------------------------------------------------------------------------/
+									VENDEDOR
+-------------------------------------------------------------------------------------*/
+
+	public function borrar_proveedor(){
+
+		$rut = array('idd' => $this->input->post('valor_enviar'));
+		echo "el rut es: ".$rut['idd'];
+		$this->modelo_model->borrar_proveedor($rut);
+		redirect('index.php/modificarproveedor');
+	}
+>>>>>>> origin/master
 
 
 		if ($query->num_rows() == 0)

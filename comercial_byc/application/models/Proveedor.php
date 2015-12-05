@@ -26,6 +26,23 @@ class Proveedor extends CI_Model
         );
         $this->db->insert('Proveedor',$data);
     }
+    function Modificar_Proveedor($rut, $razon_social, $contacto, $direccion, $celular, $correo, $web, $descuento_asig){
+        $data = array(
+            
+            'rut' => $rut,
+            'razon_social' => $razon_social,
+            'contacto' => $contacto,
+            'direccion' => $direccion,
+            'celular' => $celular,
+            'correo' => $correo,
+            'web' => $web,
+            'descuento_asig' => $descuento_asig,
+            'campo3' => " X ",
+            'campo4' => " X "
+        );
+        $query = $this->db->where('rut', $rut);
+        $query = $this->db->update('Proveedor', $data);
+    }
 
 }
  
