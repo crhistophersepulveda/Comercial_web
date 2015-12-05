@@ -356,12 +356,8 @@
                                                 </td>
                                                 <td>
                                                 
-<<<<<<< Updated upstream
                                                 <button type='button' class='btn btn-warning btn-circle' data-toggle='modal' data-target='#$modificarv->rut' > <i class='fa fa-times'></i></button>
                                                    <div class='modal fade in' id='$modificarv->rut' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' style='display: none;''>
-=======
-                                                   <div class='modal fade in' id='$modificarv->rut' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' style='display: none;'>
->>>>>>> Stashed changes
                                                         <div class='modal-dialog'>
                                                             <div class='modal-content'>
                                                                 <div class='modal-header'>
