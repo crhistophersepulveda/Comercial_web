@@ -316,6 +316,7 @@
                         <div class="panel-heading">
                            Modificar / Eliminar Vendedor
                         </div>
+                         <?php echo validation_errors(); ?>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="dataTable_wrapper">

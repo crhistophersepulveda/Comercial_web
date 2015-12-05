@@ -332,6 +332,7 @@
                            Modificar Cliente
                         </div>
                         <!-- /.panel-heading -->
+                        <?php echo validation_errors(); ?>
                         <div class="panel-body">
                             <div class="dataTable_wrapper">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">

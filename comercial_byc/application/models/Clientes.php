@@ -31,6 +31,7 @@ class Clientes extends CI_Model
         $this->db->insert('Cliente',$data);
     }
 
+
 }
  
 /*fin del archivo comentarios model*/
