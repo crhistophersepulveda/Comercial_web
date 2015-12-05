@@ -395,6 +395,9 @@
                             </div>
                             <div class="panel-body"> <!-- 6 -->
                                 <form role="form">
+                                   
+                                    <?php echo validation_errors(); ?>
+                                   
                                     <div class="row">
                                         <div class="col-md-2">
                                             <label>Rut</label>
